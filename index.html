@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <meta name="description" content="Personal portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="logo" data-field="initials"></a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#about" data-i18n="about"></a>
+        <a href="#skills" data-i18n="skills"></a>
+        <a href="#projects" data-i18n="projects"></a>
+        <a href="#experience" data-i18n="experience"></a>
+        <a href="#contact" data-i18n="contact"></a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="langToggle" aria-label="Language">EN</button>
+        <button class="icon-btn" id="themeToggle" aria-label="Theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+        <button class="icon-btn menu-btn" id="menuToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero container">
+      <div class="hero__text reveal">
+        <p class="eyebrow" data-i18n="hello"></p>
+        <h1 data-field="name"></h1>
+        <h2 class="hero__role" data-field="role"></h2>
+        <p class="hero__tagline" data-field="tagline"></p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary" data-i18n="seeWork"></a>
+          <a href="#contact" class="btn btn--ghost" data-i18n="contactMe"></a>
+          <a class="btn btn--ghost" id="cvBtn" target="_blank" rel="noopener" data-i18n="downloadCv" hidden></a>
+        </div>
+        <div class="socials" id="heroSocials"></div>
+      </div>
+      <div class="hero__photo reveal" id="heroPhoto"></div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2 class="section__title reveal" data-i18n="about"></h2>
+      <div class="about reveal">
+        <p data-field="about"></p>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2 class="section__title reveal" data-i18n="skills"></h2>
+      <ul class="chips reveal" id="skillsList"></ul>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2 class="section__title reveal" data-i18n="projects"></h2>
+      <div class="grid" id="projectsGrid"></div>
+    </section>
+
+    <section id="experience" class="section container">
+      <h2 class="section__title reveal" data-i18n="experience"></h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2 class="section__title reveal" data-i18n="contact"></h2>
+      <div class="contact reveal">
+        <p data-i18n="contactText"></p>
+        <a class="btn btn--primary btn--lg" id="emailBtn"></a>
+        <div class="socials" id="footerSocials"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="year"></span> <span data-field="name"></span></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
