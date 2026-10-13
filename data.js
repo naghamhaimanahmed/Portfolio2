@@ -4,14 +4,14 @@
 // =====================================================================
 
 const PORTFOLIO = {
-  name: { ar: "نغم أحمد", en: "Nagham Ahmed" },
+  name: { ar: "نغم هيمن أحمد", en: "Nagham Haiman Ahmed" },
   role: { ar: "مطوّرة واجهات أمامية", en: "Front-End Developer" },
   tagline: {
-    ar: "بحوّل الأفكار لمواقع سريعة وجميلة وسهلة الاستخدام.",
-    en: "I turn ideas into fast, beautiful and easy-to-use websites.",
+    ar: "بحوّل التصميمات لواجهات ويب سريعة ومتجاوبة وسهلة الاستخدام.",
+    en: "I turn designs into fast, responsive and user-friendly web interfaces.",
   },
   location: { ar: "الإمارات", en: "UAE" },
-  email: "you@example.com",
+  email: "naghamhaiman2@gmail.com",
   cv: "", // مثال: "assets/cv.pdf" — سيبيه فاضي لو مفيش CV
   photo: "", // مثال: "assets/me.jpg" — لو فاضي هتظهر الحروف الأولى من الاسم
 
@@ -21,19 +21,20 @@ const PORTFOLIO = {
   ],
 
   about: {
-    ar: "أنا مطوّرة بحب أبني تجارب ويب نضيفة ومتجاوبة. بشتغل بـ HTML و CSS و JavaScript و React، ومهتمة بالتفاصيل وتجربة المستخدم. دايمًا بتعلم حاجات جديدة وبحب أشتغل في فريق.",
-    en: "I'm a developer who loves building clean, responsive web experiences. I work with HTML, CSS, JavaScript and React, and I care about details and user experience. Always learning, and I enjoy working in teams.",
+    ar: "مطوّرة Front-End بخبرة 3 سنين في بناء واجهات ويب حديثة ومتجاوبة بتحوّل التصميمات لتجارب استخدام سلسة. بشتغل بـ HTML و CSS و JavaScript و TypeScript و React، وبهتم بكتابة كود نضيف وقابل لإعادة الاستخدام، وبركّز على الأداء وسهولة الوصول (Accessibility) وتوافق المواقع مع كل الشاشات. اتعاملت مع REST APIs وأدوات زي Git و Figma، واشتغلت مع فرق التصميم والـ Back-End عشان نطلّع منتجات بجودة عالية. دايمًا بتعلم تقنيات جديدة وبحب أحل المشاكل بطرق بسيطة وفعّالة.",
+    en: "Front-End Developer with 3 years of experience building modern, responsive web interfaces that turn designs into smooth user experiences. I work with HTML, CSS, JavaScript, TypeScript and React, and I care about clean, reusable code with a strong focus on performance, accessibility and cross-device compatibility. I've integrated REST APIs, used tools like Git and Figma, and collaborated closely with design and back-end teams to ship high-quality products. I'm always learning new technologies and enjoy solving problems in simple, effective ways.",
   },
 
   stats: [
-    { value: "2+", label: { ar: "سنين خبرة", en: "Years experience" } },
+    { value: "3+", label: { ar: "سنين خبرة", en: "Years experience" } },
     { value: "15+", label: { ar: "مشروع", en: "Projects" } },
     { value: "10+", label: { ar: "عميل سعيد", en: "Happy clients" } },
   ],
 
   skills: [
-    "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Tailwind CSS",
-    "Node.js", "Git & GitHub", "Figma", "Responsive Design",
+    "HTML5", "CSS3", "Sass", "JavaScript (ES6+)", "TypeScript", "React", "Next.js",
+    "Tailwind CSS", "Bootstrap", "Redux", "REST APIs", "Git & GitHub", "Figma",
+    "Responsive Design", "Accessibility",
   ],
 
   projects: [
@@ -74,7 +75,7 @@ const PORTFOLIO = {
 
   experience: [
     {
-      period: { ar: "2024 — الآن", en: "2024 — Present" },
+      period: { ar: "2023 — الآن", en: "2023 — Present" },
       title: { ar: "مطوّرة فرونت إند", en: "Front-End Developer" },
       place: { ar: "اسم الشركة", en: "Company Name" },
       description: {
@@ -83,7 +84,7 @@ const PORTFOLIO = {
       },
     },
     {
-      period: { ar: "2022 — 2024", en: "2022 — 2024" },
+      period: { ar: "2022 — 2023", en: "2022 — 2023" },
       title: { ar: "فريلانسر", en: "Freelancer" },
       place: { ar: "عمل حر", en: "Self-employed" },
       description: {

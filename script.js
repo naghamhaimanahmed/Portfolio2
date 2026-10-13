@@ -25,7 +25,8 @@ function storage(key, value) {
 }
 
 function initials(name) {
-  return name.split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join("").toUpperCase();
+  const words = name.split(/\s+/).filter(Boolean);
+  return [words[0], words.length > 1 ? words.at(-1) : ""].map((w) => w?.[0] ?? "").join("").toUpperCase();
 }
 
 function socialLinks(list) {
