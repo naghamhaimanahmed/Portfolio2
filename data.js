@@ -13,7 +13,7 @@ const PORTFOLIO = {
   location: { ar: "القاهرة، مصر", en: "Cairo, Egypt" },
   email: "naghamhaiman2@gmail.com",
   cv: "assets/Nagham-Haiman-CV.pdf", // سيبيه فاضي "" لو مش عايزة زرار الـ CV
-  photo: "", // مثال: "assets/me.jpg" — لو فاضي هتظهر الحروف الأولى من الاسم
+  photo: "assets/me.jpg", // لو فاضي "" هتظهر الحروف الأولى من الاسم
 
   socials: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/nagham-haiman-89bb48210" },
