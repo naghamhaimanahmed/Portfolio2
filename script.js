@@ -1,12 +1,12 @@
 const UI = {
   ar: {
-    about: "عنّي", skills: "المهارات", projects: "المشاريع", experience: "الخبرة والتعليم",
+    about: "عنّي", skills: "المهارات", projects: "المشاريع", experience: "الخبرة والتعليم", courses: "كورسات وشهادات",
     contact: "تواصل معايا", hello: "أهلاً، أنا", seeWork: "شوف شغلي", contactMe: "كلّمني",
     downloadCv: "تحميل الـ CV", demo: "عرض مباشر", code: "الكود",
     contactText: "عندك مشروع أو فرصة شغل؟ يسعدني أسمع منك!",
   },
   en: {
-    about: "About", skills: "Skills", projects: "Projects", experience: "Experience & Education",
+    about: "About", skills: "Skills", projects: "Projects", experience: "Experience & Education", courses: "Courses & Certificates",
     contact: "Contact", hello: "Hi, I'm", seeWork: "See my work", contactMe: "Get in touch",
     downloadCv: "Download CV", demo: "Live demo", code: "Code",
     contactText: "Have a project or an opportunity? I'd love to hear from you!",
@@ -62,6 +62,7 @@ function render(lang) {
     .join("");
 
   $("#skillsList").innerHTML = P.skills.map((s) => `<li>${esc(s)}</li>`).join("");
+  $("#coursesList").innerHTML = (P.courses || []).map((c) => `<li>${esc(c)}</li>`).join("");
 
   $("#projectsGrid").innerHTML = P.projects
     .map((p) => {
