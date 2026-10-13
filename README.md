@@ -1,19 +1,19 @@
-# Portfolio
+# Nagham Haiman Ahmed — Portfolio
 
-بورتفوليو شخصي بسيط (HTML / CSS / JavaScript) — بدون أي build أو مكتبات.
+Personal portfolio built with plain HTML, CSS and JavaScript — no build step, no dependencies.
 
-## المميزات
-- عربي / إنجليزي (مع دعم RTL) بزرار واحد
-- وضع فاتح / داكن
-- متجاوب مع الموبايل
-- كل المحتوى في ملف واحد: `data.js`
+## Features
+- Dark / light theme
+- Developer-themed animations: live-typing code editor, rotating role typewriter, floating code symbols, scroll reveal
+- Fully responsive, respects `prefers-reduced-motion`
+- All content lives in a single file: `data.js`
 
-## إزاي تعدّلي البيانات
-افتحي `data.js` وغيّري الاسم، الوظيفة، النبذة، المهارات، المشاريع، الخبرات، والإيميل.
-لو عايزة صورة شخصية أو صور للمشاريع أو CV، حطيهم في فولدر `assets/` واكتبي المسار في `data.js`.
+## Editing content
+Open `data.js` and edit the name, roles, bio, skills, experience, education, courses and projects.
+Images and the CV go in `assets/`.
 
-## التشغيل محليًا
-افتحي `index.html` في المتصفح مباشرةً.
+## Run locally
+Open `index.html` in a browser.
 
-## النشر على GitHub Pages
-Settings → Pages → Source: `Deploy from a branch` → اختاري الفرع والفولدر `/ (root)` → Save.
+## Deploy (GitHub Pages)
+Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)` → Save.

@@ -1,91 +1,121 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nagham Haiman Ahmed</title>
-  <meta name="description" content="Personal portfolio" />
+  <title>Nagham Haiman Ahmed — Front-End Developer</title>
+  <meta name="description" content="Nagham Haiman Ahmed — Front-End Developer and Computer Science Teaching Assistant based in Cairo, Egypt." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="bg-symbols" id="bgSymbols" aria-hidden="true"></div>
+
   <header class="nav">
     <div class="container nav__inner">
-      <a href="#home" class="logo" data-field="initials"></a>
+      <a href="#home" class="logo"><span class="logo__bracket">&lt;</span><span id="logoName"></span><span class="logo__bracket"> /&gt;</span></a>
       <nav class="nav__links" id="navLinks">
-        <a href="#about" data-i18n="about"></a>
-        <a href="#skills" data-i18n="skills"></a>
-        <a href="#projects" data-i18n="projects"></a>
-        <a href="#experience" data-i18n="experience"></a>
-        <a href="#contact" data-i18n="contact"></a>
+        <a href="#about"><span>01.</span> About</a>
+        <a href="#skills"><span>02.</span> Skills</a>
+        <a href="#experience"><span>03.</span> Experience</a>
+        <a href="#projects"><span>04.</span> Projects</a>
+        <a href="#contact"><span>05.</span> Contact</a>
       </nav>
       <div class="nav__actions">
-        <button class="icon-btn" id="langToggle" aria-label="Language">EN</button>
-        <button class="icon-btn" id="themeToggle" aria-label="Theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
-        <button class="icon-btn menu-btn" id="menuToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuToggle" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
   <main>
+    <!-- Hero -->
     <section id="home" class="hero container">
-      <div class="hero__text reveal">
-        <p class="eyebrow" data-i18n="hello"></p>
-        <h1 data-field="name"></h1>
-        <h2 class="hero__role" data-field="role"></h2>
-        <p class="hero__tagline" data-field="tagline"></p>
+      <div class="hero__text">
+        <p class="mono eyebrow">Hi, my name is</p>
+        <h1 id="heroName"></h1>
+        <h2 class="hero__role">
+          <span class="mono prompt">&gt;</span>
+          <span id="typedRole"></span><span class="caret" aria-hidden="true"></span>
+        </h2>
+        <p class="hero__tagline" id="heroTagline"></p>
         <div class="hero__cta">
-          <a href="#projects" class="btn btn--primary" data-i18n="seeWork"></a>
-          <a href="#contact" class="btn btn--ghost" data-i18n="contactMe"></a>
-          <a class="btn btn--ghost" id="cvBtn" target="_blank" rel="noopener" data-i18n="downloadCv" hidden></a>
+          <a href="#projects" class="btn btn--primary">View my work</a>
+          <a class="btn btn--ghost" id="cvBtn" target="_blank" rel="noopener" hidden>Download CV</a>
         </div>
-        <div class="socials" id="heroSocials"></div>
+        <div class="hero__meta">
+          <span class="status"><span class="status__dot"></span>Open to opportunities</span>
+          <span class="mono" id="heroLocation"></span>
+        </div>
       </div>
-      <div class="hero__photo reveal" id="heroPhoto"></div>
+
+      <div class="hero__visual">
+        <div class="photo" id="heroPhoto"></div>
+        <div class="editor" aria-label="Code snippet describing Nagham">
+          <div class="editor__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="editor__file mono">nagham.ts</span>
+          </div>
+          <pre class="editor__code mono"><code id="editorCode"></code><span class="caret caret--code" aria-hidden="true"></span></pre>
+        </div>
+      </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="section container">
-      <h2 class="section__title reveal" data-i18n="about"></h2>
-      <div class="about reveal">
-        <p data-field="about"></p>
-        <div class="stats" id="stats"></div>
+      <h2 class="section__title reveal"><span class="mono">01.</span> About Me</h2>
+      <div class="about">
+        <div class="about__text reveal" id="aboutText"></div>
+        <div class="stats reveal" id="stats"></div>
       </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills" class="section container">
-      <h2 class="section__title reveal" data-i18n="skills"></h2>
-      <ul class="chips reveal" id="skillsList"></ul>
+      <h2 class="section__title reveal"><span class="mono">02.</span> Skills</h2>
+      <div class="skill-groups" id="skillGroups"></div>
     </section>
 
+    <!-- Experience -->
+    <section id="experience" class="section container">
+      <h2 class="section__title reveal"><span class="mono">03.</span> Experience &amp; Education</h2>
+      <div class="exp">
+        <ol class="timeline" id="timeline"></ol>
+        <aside class="edu">
+          <h3 class="edu__title mono reveal">// Education</h3>
+          <div id="education"></div>
+          <h3 class="edu__title mono reveal">// Courses &amp; Certificates</h3>
+          <ul class="courses reveal" id="courses"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Projects -->
     <section id="projects" class="section container">
-      <h2 class="section__title reveal" data-i18n="projects"></h2>
+      <h2 class="section__title reveal"><span class="mono">04.</span> Projects</h2>
       <div class="grid" id="projectsGrid"></div>
     </section>
 
-    <section id="experience" class="section container">
-      <h2 class="section__title reveal" data-i18n="experience"></h2>
-      <ol class="timeline" id="timeline"></ol>
-    </section>
-
-    <section id="courses" class="section container">
-      <h2 class="section__title reveal" data-i18n="courses"></h2>
-      <ul class="chips chips--muted reveal" id="coursesList"></ul>
-    </section>
-
+    <!-- Contact -->
     <section id="contact" class="section container">
-      <h2 class="section__title reveal" data-i18n="contact"></h2>
       <div class="contact reveal">
-        <p data-i18n="contactText"></p>
-        <a class="btn btn--primary btn--lg" id="emailBtn"></a>
-        <div class="socials" id="footerSocials"></div>
+        <p class="mono eyebrow">05. What's next?</p>
+        <h2>Let's build something great together</h2>
+        <p>I'm open to front-end roles, freelance projects and teaching collaborations. Whether you have a question or just want to say hi, my inbox is always open.</p>
+        <a class="btn btn--primary btn--lg" id="emailBtn">Say hello</a>
+        <div class="socials" id="socials"></div>
       </div>
     </section>
   </main>
 
-  <footer class="footer container">
-    <p>© <span id="year"></span> <span data-field="name"></span></p>
+  <footer class="footer container mono">
+    <p>Designed &amp; built by <span id="footerName"></span> · © <span id="year"></span></p>
   </footer>
 
   <script src="data.js"></script>
