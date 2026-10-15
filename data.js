@@ -1,102 +1,152 @@
 // =====================================================================
-//  كل بيانات البورتفوليو هنا — عدّلي الملف ده بس وكل الموقع هيتحدث
-//  All portfolio content lives here — edit this file only.
+//  All portfolio content lives here — edit this file and the site updates.
 // =====================================================================
 
 const PORTFOLIO = {
-  name: { ar: "نغم هيمن أحمد", en: "Nagham Haiman Ahmed" },
-  role: { ar: "مطوّرة واجهات أمامية", en: "Front-End Developer" },
-  tagline: {
-    ar: "بحوّل التصميمات لواجهات ويب سريعة ومتجاوبة وسهلة الاستخدام.",
-    en: "I turn designs into fast, responsive and user-friendly web interfaces.",
-  },
-  location: { ar: "الإمارات", en: "UAE" },
+  name: "Nagham Haiman Ahmed",
+  firstName: "Nagham",
+  // Rotating titles shown in the hero (typewriter effect)
+  roles: ["Front-End Developer"],
+  tagline:
+    "I build fast, responsive and user-friendly web interfaces with React and TypeScript — turning designs into clean, maintainable code.",
+  location: "Cairo, Egypt",
   email: "naghamhaiman2@gmail.com",
-  cv: "", // مثال: "assets/cv.pdf" — سيبيه فاضي لو مفيش CV
-  photo: "", // مثال: "assets/me.jpg" — لو فاضي هتظهر الحروف الأولى من الاسم
+  cv: "assets/Nagham-Haiman-CV.pdf", // set to "" to hide the CV button
+  photo: "assets/me.jpg", // set to "" to show initials instead
 
   socials: [
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/nagham-haiman-89bb48210" },
     { label: "GitHub", url: "https://github.com/naghamhaimanahmed" },
-    { label: "LinkedIn", url: "https://www.linkedin.com/" },
   ],
 
-  about: {
-    ar: "مطوّرة Front-End بخبرة 3 سنين في بناء واجهات ويب حديثة ومتجاوبة بتحوّل التصميمات لتجارب استخدام سلسة. بشتغل بـ HTML و CSS و JavaScript و TypeScript و React، وبهتم بكتابة كود نضيف وقابل لإعادة الاستخدام، وبركّز على الأداء وسهولة الوصول (Accessibility) وتوافق المواقع مع كل الشاشات. اتعاملت مع REST APIs وأدوات زي Git و Figma، واشتغلت مع فرق التصميم والـ Back-End عشان نطلّع منتجات بجودة عالية. دايمًا بتعلم تقنيات جديدة وبحب أحل المشاكل بطرق بسيطة وفعّالة.",
-    en: "Front-End Developer with 3 years of experience building modern, responsive web interfaces that turn designs into smooth user experiences. I work with HTML, CSS, JavaScript, TypeScript and React, and I care about clean, reusable code with a strong focus on performance, accessibility and cross-device compatibility. I've integrated REST APIs, used tools like Git and Figma, and collaborated closely with design and back-end teams to ship high-quality products. I'm always learning new technologies and enjoy solving problems in simple, effective ways.",
-  },
+  about: [
+    "I'm a Front-End Developer with 3+ years of experience turning UI/UX designs and business requirements into clean, reusable and responsive interfaces using HTML, CSS, JavaScript, TypeScript and React. I currently work remotely as a Front-End Developer at Nexus Software Development (Ajman, UAE), integrating REST APIs and collaborating closely with designers and back-end developers.",
+    "I'm also a Computer Science Teaching Assistant at the Arab Academy for Science, Technology & Maritime Transport and an AI Instructor with AMIDEAST's ECRAiL program, where I teach AI and Machine Learning fundamentals through hands-on labs and projects. I'm currently pursuing my Master's in Computer Science.",
+  ],
 
   stats: [
-    { value: "3+", label: { ar: "سنين خبرة", en: "Years experience" } },
-    { value: "15+", label: { ar: "مشروع", en: "Projects" } },
-    { value: "10+", label: { ar: "عميل سعيد", en: "Happy clients" } },
+    { value: "3+", label: "Years in front-end" },
+    { value: "2+", label: "Years teaching CS & AI" },
+    { value: "3.68", label: "GPA, B.Sc. (High Honors)" },
   ],
 
-  skills: [
-    "HTML5", "CSS3", "Sass", "JavaScript (ES6+)", "TypeScript", "React", "Next.js",
-    "Tailwind CSS", "Bootstrap", "Redux", "REST APIs", "Git & GitHub", "Figma",
-    "Responsive Design", "Accessibility",
+  skillGroups: [
+    { title: "Front-End", items: ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript", "React.js"] },
+    { title: "Styling & UI", items: ["Tailwind CSS", "Bootstrap", "Responsive Design"] },
+    { title: "Tools & APIs", items: ["Git & GitHub", "REST APIs", "Figma"] },
+    { title: "AI & Systems", items: ["AI Fundamentals", "Machine Learning Concepts", "Linux (basic)", "TCP/IP · DNS · DHCP", "IT Support"] },
   ],
 
   projects: [
     {
-      title: { ar: "متجر إلكتروني", en: "E-commerce Store" },
-      description: {
-        ar: "متجر أونلاين بسلة مشتريات وفلترة منتجات ودفع.",
-        en: "Online store with a cart, product filters and checkout.",
-      },
-      tags: ["React", "Tailwind", "Stripe"],
-      image: "", // مثال: "assets/project1.png"
-      demo: "#",
-      code: "#",
+      title: "Nexus Software Development — Company Website",
+      label: "Professional Work",
+      description:
+        "Developed the official website for Nexus Software Development, a software company based in Ajman, UAE — a responsive, user-friendly site presenting the company's services and brand.",
+      tags: ["React", "TypeScript", "Responsive UI"],
+      image: "",
+      demo: "https://www.nexuscodes.tech/",
+      code: "",
     },
     {
-      title: { ar: "تطبيق مهام", en: "Task Manager App" },
-      description: {
-        ar: "تطبيق لتنظيم المهام بالسحب والإفلات وحفظ تلقائي.",
-        en: "Drag-and-drop task organizer with auto-save.",
-      },
-      tags: ["JavaScript", "LocalStorage"],
+      title: "Indoor Positioning with Low-Cost LiDAR",
+      label: "Graduation Project",
+      description:
+        "Indoor localization and mapping system using low-cost LiDAR and the Hector SLAM algorithm for pose estimation — enabling affordable positioning for robotics and tracking applications.",
+      tags: ["LiDAR", "Hector SLAM", "Robotics", "Mapping"],
       image: "",
-      demo: "#",
-      code: "#",
-    },
-    {
-      title: { ar: "لاندينج بيج لشركة", en: "Company Landing Page" },
-      description: {
-        ar: "صفحة تعريفية متجاوبة بأنيميشن خفيف وأداء عالي.",
-        en: "Responsive landing page with subtle animation and high performance.",
-      },
-      tags: ["HTML", "CSS", "GSAP"],
-      image: "",
-      demo: "#",
-      code: "#",
+      demo: "",
+      code: "",
     },
   ],
 
   experience: [
     {
-      period: { ar: "2023 — الآن", en: "2023 — Present" },
-      title: { ar: "مطوّرة فرونت إند", en: "Front-End Developer" },
-      place: { ar: "اسم الشركة", en: "Company Name" },
-      description: {
-        ar: "بناء واجهات مستخدم وتحسين الأداء والتعاون مع فريق التصميم.",
-        en: "Building user interfaces, improving performance and collaborating with design.",
-      },
+      period: "2026 — Present",
+      title: "Front-End Developer (Remote)",
+      place: "Nexus Software Development — Ajman, UAE",
+      points: [
+        "Develop responsive, user-friendly web interfaces with HTML, CSS, JavaScript, TypeScript and React.",
+        "Translate UI/UX designs and business requirements into reusable, maintainable components.",
+        "Integrate front-end applications with REST APIs and collaborate with back-end developers and designers.",
+        "Optimize performance and ensure cross-browser and mobile compatibility.",
+      ],
     },
     {
-      period: { ar: "2022 — 2023", en: "2022 — 2023" },
-      title: { ar: "فريلانسر", en: "Freelancer" },
-      place: { ar: "عمل حر", en: "Self-employed" },
-      description: {
-        ar: "تنفيذ مواقع لعملاء في مجالات مختلفة.",
-        en: "Delivered websites for clients across different industries.",
-      },
+      period: "May 2026 — Jun 2026",
+      title: "AI Instructor — ECRAiL Program",
+      place: "AMIDEAST — Egypt",
+      points: [
+        "Delivered Artificial Intelligence training as part of the AMIDEAST ECRAiL program.",
+        "Taught core AI and Machine Learning concepts through lectures, hands-on labs and practical projects.",
+        "Mentored participants on applying AI tools to real-world problems and assessed their project work.",
+      ],
     },
     {
-      period: { ar: "2018 — 2022", en: "2018 — 2022" },
-      title: { ar: "بكالوريوس", en: "Bachelor's Degree" },
-      place: { ar: "اسم الجامعة", en: "University Name" },
-      description: { ar: "", en: "" },
+      period: "2025 — Present",
+      title: "Freelancing Coach",
+      place: "Elharefa Company",
+      points: ["Train students in the technical and personal skills required by the job market, including freelancing and client management."],
     },
+    {
+      period: "2023 — Present",
+      title: "Teaching Assistant, Computer Science",
+      place: "Arab Academy for Science, Technology & Maritime Transport",
+      points: [
+        "Deliver tutorials and labs in Web Programming, OOP, Advanced Databases, Digital Logic, Human-Centered Software Design and more.",
+        "Mentor students on software projects, especially front-end development.",
+        "Organize workshops on modern web development practices.",
+      ],
+    },
+    {
+      period: "2021 — Present",
+      title: "Front-End Developer (Freelance)",
+      place: "Self-employed",
+      points: [
+        "Design and build responsive websites with HTML, CSS, JavaScript and React.",
+        "Translate client business requirements into intuitive user interfaces.",
+        "Optimize performance and ensure cross-browser compatibility while managing multiple projects under tight deadlines.",
+      ],
+    },
+    {
+      period: "Feb 2022 — Jan 2024",
+      title: "Researcher",
+      place: "Action Restitution Africa (ARA)",
+      points: ["Built datasets, wrote reports, reviewed studies, and contributed web programming and graphic design."],
+    },
+  ],
+
+  education: [
+    {
+      period: "2024 — Present",
+      title: "M.Sc. Computer Science",
+      place: "Arab Academy for Science, Technology & Maritime Transport",
+    },
+    {
+      period: "2019 — 2023",
+      title: "B.Sc. Computing & Information Technology",
+      place: "Arab Academy for Science, Technology & Maritime Transport",
+      note: "Graduated with High Honors — GPA 3.68 / 4.0",
+    },
+  ],
+
+  courses: [
+    { name: "Google IT Support Professional Certificate", by: "Coursera", year: "2025" },
+    { name: "Introduction to Networking", by: "Cisco Academy", year: "2025" },
+    { name: "Winter School on Quantum Information & Computing", by: "", year: "2025" },
+    { name: "Artificial Intelligence", by: "AMIT", year: "2024" },
+    { name: "Processing Technology of Agricultural & Livestock Products", by: "Training course — China", year: "2024" },
+    { name: "Web Design Track", by: "ITI", year: "2021 · 2022" },
+    { name: "ACM Training", by: "Online", year: "2022" },
+    { name: "Freelancing", by: "Online", year: "2021" },
+    { name: "Mobile Application Development", by: "YAT", year: "2020" },
+  ],
+
+  activities: [
+    "Problem-Solving Coach — ICPC AAST Aswan community",
+    "Head of Media & Marketing — GDG student chapter and IEEE student branch",
+    "Member — Normandy ROV Team, AASTMT",
+    "Web Design Basics Trainer for college newcomers",
+    "Member — Marketing Design Team, AASTMT Aswan branch",
   ],
 };
