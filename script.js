@@ -105,7 +105,10 @@ function typeRoles() {
     char += deleting ? -1 : 1;
     el.textContent = word.slice(0, char);
     let delay = deleting ? 40 : 85;
-    if (!deleting && char === word.length) { deleting = true; delay = 1800; }
+    if (!deleting && char === word.length) {
+      if (P.roles.length === 1) return; // single title: type it once and keep it
+      deleting = true; delay = 1800;
+    }
     else if (deleting && char === 0) { deleting = false; role = (role + 1) % P.roles.length; delay = 300; }
     setTimeout(tick, delay);
   })();

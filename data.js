@@ -6,9 +6,9 @@ const PORTFOLIO = {
   name: "Nagham Haiman Ahmed",
   firstName: "Nagham",
   // Rotating titles shown in the hero (typewriter effect)
-  roles: ["Front-End Developer", "AI Instructor", "CS Teaching Assistant", "Freelancing Coach"],
+  roles: ["Front-End Developer"],
   tagline:
-    "I build fast, responsive web interfaces with React and TypeScript — and teach the next generation of developers and AI practitioners.",
+    "I build fast, responsive and user-friendly web interfaces with React and TypeScript — turning designs into clean, maintainable code.",
   location: "Cairo, Egypt",
   email: "naghamhaiman2@gmail.com",
   cv: "assets/Nagham-Haiman-CV.pdf", // set to "" to hide the CV button
