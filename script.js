@@ -68,6 +68,8 @@ function render() {
     .map((c) => `<li><span>${esc(c.name)}${c.by ? `<small>${esc(c.by)}</small>` : ""}</span><span>${esc(c.year)}</span></li>`)
     .join("");
 
+  $("#activities").innerHTML = (P.activities || []).map((a) => `<li>${esc(a)}</li>`).join("");
+
   $("#projectsGrid").innerHTML = P.projects
     .map((p, i) => {
       const links = [
@@ -116,6 +118,7 @@ const CODE = [
   ["tk-kw", "const "], ["tk-var", "developer"], ["tk-pun", " = {\n  "],
   ["tk-prop", "name"], ["tk-pun", ": "], S(P.firstName), ["tk-pun", ",\n  "],
   ["tk-prop", "role"], ["tk-pun", ": "], S(P.roles[0]), ["tk-pun", ",\n  "],
+  ["tk-prop", "company"], ["tk-pun", ": "], S("Nexus Software"), ["tk-pun", ",\n  "],
   ["tk-prop", "stack"], ["tk-pun", ": ["], S("React"), ["tk-pun", ", "], S("TypeScript"), ["tk-pun", "],\n  "],
   ["tk-prop", "experience"], ["tk-pun", ": "], S("3+ years"), ["tk-pun", ",\n  "],
   ["tk-prop", "available"], ["tk-pun", ": "], ["tk-bool", "true"], ["tk-pun", ",\n};"],
